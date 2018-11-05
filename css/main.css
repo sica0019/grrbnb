@@ -22,23 +22,21 @@ main {
     margin: 0 auto;
     border: 1px solid #aaa;
     text-align: left;
-    font-size: ; 
+    font-size: ;
 }
 
-img{
-    
-}
+img {}
 
 input#min.price::after {
     content: "$"attr(data-price);
     display: block;
-    margin-right: -2rem;
+    margin-right: -1rem;
 }
 
 input.price#max::after {
     content: "$"attr(data-price);
     display: block;
-    margin-right: -1.8rem;
+    margin-right: -1.1rem;
 }
 
 :root {
@@ -51,26 +49,26 @@ input.price#max::after {
     --hue: 200deg;
 }
 
-header{
+header {
     background: url(../img/Dog%20Sleeding.jpeg) center no-repeat;
 }
 
-.place{
+.place {
     display: flex;
     flex-direction: column;
 }
 
-.check-in{
+.check-in {
     display: flex;
     flex-direction: column;
 }
 
-.check-out{
+.check-out {
     display: flex;
     flex-direction: column;
 }
 
-div{
+div {
     margin: 5%;
 }
 
@@ -87,7 +85,7 @@ div{
 }
 
 #min {
-    
+
     grid-area: D;
 }
 
@@ -109,31 +107,81 @@ h1 {
     flex-direction: row;
 }
 
-@media (max-width: 599px) {
-}
+@media (max-width: 599px) {}
 
 @media (min-width: 600px) and (max-width:999px) {
-    div{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .place , .check-in , .check-out{
-        width: 50%;    
-    }
-    
-}
-
-@media (min-width: 1000px) {
-    main{
-        display: flex;
-        flex-wrap: wrap;
-    }
     
     form{
         display: grid;
-        grid-template-columns:  ;
-        grid-template-areas: "A A" "B C" "D E" "F F";
+        grid-template-columns: 2;
+        grid-template-rows: 4;
     }
-    
+
+    .place {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+        text-align: 
+    }
+
+    .check-in {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .check.out {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .min {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .max {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 4;
+    }
+
+    .place {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+
+    .check-in {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .check.out {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .min {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .max {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+
+
 }
