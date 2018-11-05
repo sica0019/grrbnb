@@ -30,13 +30,13 @@ img {}
 input#min.price::after {
     content: "$"attr(data-price);
     display: block;
-    margin-right: -1rem;
+    margin-right: -1.5rem;
 }
 
 input.price#max::after {
     content: "$"attr(data-price);
     display: block;
-    margin-right: -1.1rem;
+    margin-right: -1.5rem;
 }
 
 :root {
@@ -46,7 +46,7 @@ input.price#max::after {
     --fontFour: 1.25rem;
     --fontFive: 1rem;
     --fontSix: 0.8rem;
-    --hue: 200deg;
+    --hue: 160deg;
 }
 
 header {
@@ -72,16 +72,29 @@ div {
     margin: 5%;
 }
 
+.price{
+    font-size: var(--fontSix);
+    display: block;
+    width: 80%;
+    color: hsl(var(--hue) 50% 20%);
+}
+
 #city {
+    color: hsl(var(--hue) 50% 20%);
+    font-size: var(--fontSix);
     grid-area: A;
 }
 
 #check-in {
+    color: hsl(var(--hue) 50% 20%);
     grid-area: B;
+    font-size: var(--fontSix);
 }
 
-#check-out {
+#check-out { 
+    color: hsl(var(--hue) 50% 20%);
     grid-area: C;
+    font-size: var(--fontSix);
 }
 
 #min {
@@ -98,8 +111,10 @@ div {
 }
 
 .search-btn {
-    background-color: hsl(var(--hue) 100% 75%);
+    background-color: hsl(var(--hue) 90% 30%);
     font-size: 1rem;
+    padding: 5px;
+    color: white;
 }
 
 h1 {
